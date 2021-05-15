@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+
+        <style>
+            body {
+                text-align: center;
+                background-color: rgb(0, 255, 221);
+            }
+
+            #heading {
+                color: rgba(0, 0, 0, 0.63);
+                font-family: cursive;
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+                text-decoration-color: rgb(25, 209, 209);
+            }
+
+            #image {
+                height:450px;
+                width:400px;
+                border-radius: 10%;
+                border-style: double;
+                border-width: 5px;
+                background-color: white;
+            }
+
+            #name {
+               color: blueviolet; 
+               font-weight: bold;
+               font-size: 22px;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <h1 id="heading">THE FAMILY BOOK</h1>
+
+        <img id="image" 
+        src="https://www.thestickerfamily.nl/wp-content/uploads/2018/11/MY_wit_350x350-350x350.jpg">
+
+        <h4 id="name"></h4>
+
+        <button onclick="next()">
+            Next
+        </button>
+
+
+        <script>
+            var members= [
+                "https://i.pinimg.com/originals/87/b8/3b/87b83ba77a10a1d3313ed7872918524d.jpg",
+                "https://img.favpng.com/4/24/8/clip-art-mother-openclipart-illustration-image-png-favpng-iaCpPK5ewsh00VYqUkfRFfaif.jpg",
+                "https://lh3.googleusercontent.com/proxy/b9j9dvXm36voALaCUt5q-lSgAJEzPnGDBOOjNo-F84p8tcfeptX8sXE-BQmgrh7Anv3HdEGXehLktnujbyWBpZo",
+                "https://i.pinimg.com/736x/b1/5e/22/b15e22a1fca9e50bfda1e1da4f433563.jpg",
+            
+            ];
+            var names= [
+                "Mr.Ankush Choudhary",
+                "Mrs. Sanchita Choudhary ",
+                "Aarnav Choudhary",
+                " Arhaan Choudhary",    
+            
+            ];
+            var i=0;
+            function next(){
+            document.getElementById("image").src=members[i];
+            document.getElementById("name").innerHTML=names[i];
+            if (i>4){
+            i=0;
+            }
+            else i++;
+            };
+        </script>
+    </body>
+</html>
+    
